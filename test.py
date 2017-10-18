@@ -127,21 +127,29 @@ class Test(BaseTest):
 
 
     def setup_readme(self):
+        sh("git checkout dev")
         with open('README.md', 'a') as f:
             for step in range(1, 10):
                 f.writelines([
                     '*{}* unchanged\n'.format(self.branch_name(step)),
                     '\n'
                 ])
-
-
-    def reset(self):
-        yellow("> reset")
-        sh("git checkout dev")
+        sh("git add README.md")
+        sh("git cm -m 'setup readme'")
         sh("git push -f origin HEAD")
         sh("git branch -D master")
         sh("git checkout -b master")
         sh("git push -f origin HEAD")
+        sh("git checkout dev")
+
+
+    def reset(self):
+        yellow("> reset")
+        sh("git checkout begining")
+        for branch in ['dev', 'master']:
+            sh("git branch -D {}".format(branch))
+            sh("git checkout -b {}".format(branch))
+            sh("git push -f origin HEAD")
         sh("git checkout dev")
 
     def __str__(self):
