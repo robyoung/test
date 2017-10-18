@@ -9,7 +9,7 @@ from lazyme.string import color_print
 
 
 TESTS = """
-fail dev-merge   master-rebase dev-merge    master-rebase
+pass dev-merge   master-rebase dev-merge    master-rebase
 pass dev-merge   master-merge
 pass dev-merge   master-rebase
 pass dev-rebase  master-merge
