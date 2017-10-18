@@ -4,7 +4,7 @@
 - Create a [personal API token](https://github.com/settings/tokens)
 - Run tests with `GITHUB_TOKEN=<your access token> make test`
 
-*feature-3-1* unchanged
+*feature-3-1* changed
 
 *feature-3-2* unchanged
 
@@ -21,4 +21,6 @@
 *feature-3-8* unchanged
 
 *feature-3-9* unchanged
+
+
 
