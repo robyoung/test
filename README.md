@@ -6,7 +6,7 @@
 
 *feature-7-1* unchanged
 
-*feature-7-2* unchanged
+*feature-7-2* changed
 
 *feature-7-3* unchanged
 
@@ -21,4 +21,6 @@
 *feature-7-8* unchanged
 
 *feature-7-9* unchanged
+
+
 
